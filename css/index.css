@@ -1,0 +1,290 @@
+/* =========================
+   基础设置
+========================= */
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+    font-family:
+        "PingFang SC",
+        "Microsoft YaHei",
+        Arial,
+        sans-serif;
+    background: #eef2f7;
+    color: #222;
+}
+
+/* =========================
+   APP容器
+========================= */
+.app {
+    width: 430px;
+    max-width: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding-bottom: 80px;
+    background: #F5F7FB;
+}
+
+/* =========================
+   顶部导航
+========================= */
+.top-bar {
+    height: 58px;
+    background: rgba(255, 255, 255, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.app-logo {
+    height: 53px;
+    object-fit: contain;
+}
+
+.location {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.message {
+    font-size: 14px;
+    color: #555;
+}
+
+/* =========================
+   通用卡片
+========================= */
+.card {
+    background: #ffffff;
+    margin: 12px;
+    padding: 16px;
+    border-radius: 16px;
+}
+
+.card-title {
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 14px;
+}
+
+/* =========================
+   我要去哪
+========================= */
+.travel-card {
+    margin-top: 0px;
+    background: linear-gradient(100deg, #4f7fc4, #6fa4e6);
+    color: #fff;
+}
+
+.search-box {
+    height: 48px;
+    background: #f5f6f8;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 18px;
+    color: #999;
+    font-size: 15px;
+}
+
+.search-box span {
+    font-size: 18px;
+}
+
+/* =========================
+   我要补能
+========================= */
+.energy-card {
+    color: #fff;
+    background: linear-gradient(100deg, #08a866, #65cfa3);
+}
+
+.service-grid {
+    display: flex;
+    gap: 15px;
+}
+
+.service-item {
+    flex: 1;
+    height: 90px;
+    background: #d3f8f2;
+    border-radius: 15px;
+    text-align: center;
+    padding-top: 8px;
+}
+
+.service-icon {
+    font-size: 26px;
+    margin-bottom: 0px;
+}
+
+.service-class {
+    margin-top: 0px;
+    color: #000000;
+    font-size: 15px;
+}
+
+.service-desc {
+    margin-top: 0px;
+    color: #888;
+    font-size: 12px;
+}
+
+/* =========================
+   快捷服务
+========================= */
+.quick-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+    gap: 10px;
+}
+
+.quick-grid div {
+    font-size: 14px;
+    line-height: 26px;
+    color: #333;
+}
+
+.quick-grid div:first-line {
+    font-size: 25px;
+}
+
+/* =========================
+   最近使用
+========================= */
+.recent-item {
+    height: 42px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #f2f2f2;
+    font-size: 15px;
+}
+
+.recent-item:last-child {
+    border-bottom: none;
+}
+
+.recent-item span {
+    margin-left: 12px;
+}
+
+/* =========================
+   今日推荐
+========================= */
+.recommend-item {
+    background: #f7faf9;
+    border-radius: 12px;
+    padding: 12px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.recommend-item:last-child {
+    margin-bottom: 0;
+}
+
+/* =========================
+   附近服务
+========================= */
+.near-grid {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    font-size: 14px;
+    line-height: 25px;
+}
+
+.near-grid div {
+    flex: 1;
+}
+
+/* =========================
+   我的订单
+========================= */
+.order-grid {
+    display: flex;
+    background: #f7f8fa;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.order-grid div {
+    flex: 1;
+    text-align: center;
+    padding: 14px 0;
+    font-size: 14px;
+    border-right: 1px solid #eee;
+}
+
+.order-grid div:last-child {
+    border-right: none;
+}
+
+/* =========================
+   底部导航
+========================= */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 430px;
+    max-width: 100%;
+    height: 70px;
+    background:
+        rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(12px);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 1px solid #eee;
+    z-index: 999;
+}
+
+.nav-item {
+    flex: 1;
+    text-align: center;
+    font-size: 12px;
+    color: #777;
+}
+
+.nav-item div {
+    font-size: 23px;
+    line-height: 28px;
+}
+
+.nav-item.active {
+    color: #00a86b;
+}
+
+/* =========================
+   点击效果
+========================= */
+.card,
+.service-item,
+.quick-grid div,
+.nav-item {
+    cursor: pointer;
+}
+
+.card:active,
+.service-item:active,
+.quick-grid div:active {
+    transform: scale(.98);
+}

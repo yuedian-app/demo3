@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>约电出行</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- 顶部导航 -->
+        <div class="top-bar">
+            <div class="logo-area">
+                <img src="img/logo.webp" class="app-logo">
+                <div class="location">
+                    📍 深圳 ▼
+                </div>
+            </div>
+            <div class="message">
+                🔔
+            </div>
+        </div>
+        <!-- 我要去哪 -->
+        <div class="card travel-card" onclick="goTravel()">
+            <div class="card-title">
+                🚖 我要去哪？
+            </div>
+            <div class="search-box">
+                输入目的地
+                <span>
+                    🔍
+                </span>
+            </div>
+        </div>
+        <!-- 我要补能 -->
+        <div class="card energy-card">
+            <div class="card-title">
+                🔋 我要补能
+            </div>
+            <div class="service-grid">
+                <div class="service-item" onclick="goEnergy('rescue')">
+                    <div class="service-icon">
+                        ⚡
+                    </div>
+                    <div class="service-class">
+                        移动补能
+                    </div>
+                    <div class="service-desc">
+                        救援充电/搭电
+                    </div>
+                </div>
+                <div class="service-item" onclick="goEnergy('station')">
+                    <div class="service-icon">
+                        🔌
+                    </div>
+                    <div class="service-class">
+                        找充电站
+                    </div>
+                    <div class="service-desc">
+                        附近优惠充电
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 快捷服务 -->
+        <div class="card">
+            <div class="card-title">
+                快捷服务
+            </div>
+            <div class="quick-grid">
+                <div onclick="goTravel('taxi')">
+                    🚖
+                    <br>
+                    打车
+                </div>
+                <div onclick="goTravel('carpool')">
+                    🚘
+                    <br>
+                    顺风车
+                </div>
+                <div onclick="goEnergy('rescue')">
+                    🔋
+                    <br>
+                    补电
+                </div>
+                <div onclick="goEnergy('station')">
+                    ⚡
+                    <br>
+                    充电站
+                </div>
+            </div>
+        </div>
+        <!-- 最近使用 -->
+        <div class="card">
+            <div class="card-title">
+                最近使用
+            </div>
+            <div class="recent-item">
+                🏠
+                <span>
+                    家
+                </span>
+            </div>
+            <div class="recent-item">
+                🏢
+                <span>
+                    公司
+                </span>
+            </div>
+            <div class="recent-item">
+                🚄
+                <span>
+                    深圳北站
+                </span>
+            </div>
+        </div>
+        <!-- 今日推荐 -->
+        <div class="card">
+            <div class="card-title">
+                今日推荐
+            </div>
+            <div class="recommend-item">
+                🔋 合作充电站优惠
+            </div>
+            <div class="recommend-item">
+                ⚡ 首单补能优惠
+            </div>
+        </div>
+        <!-- 附近服务 -->
+        <div class="card">
+            <div class="card-title">
+                附近服务
+            </div>
+            <div class="near-grid">
+                <div>
+                    🚖
+                    <br>
+                    可叫车辆
+                </div>
+                <div>
+                    🔋
+                    <br>
+                    补能车
+                </div>
+                <div>
+                    ⚡
+                    <br>
+                    合作充电站
+                </div>
+            </div>
+        </div>
+        <!-- 我的订单 -->
+        <div class="card">
+            <div class="card-title">
+                我的订单
+            </div>
+            <div class="order-grid">
+                <div onclick="goOrder()">
+                    待支付
+                </div>
+                <div onclick="goOrder()">
+                    进行中
+                </div>
+                <div onclick="goOrder()">
+                    待评价
+                </div>
+            </div>
+        </div>
+        <!-- 底部导航 -->
+        <div class="bottom-nav">
+            <div class="nav-item active"><div>🏠</div>首页</div>
+            <div class="nav-item" onclick="location.href='travel.html'"><div>🚖</div>出行</div>
+            <div class="nav-item" onclick="location.href='energy.html'"><div>🔋</div>补能</div>
+            <div class="nav-item" onclick="location.href='mine.html'"><div>👤</div>我的</div>
+        </div>
+    </div>
+
+    <script src="js/index.js"></script>
+
+</body>
+
+</html>
