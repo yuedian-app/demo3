@@ -1,0 +1,331 @@
+/* =========================
+   基础设置
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family:
+        "PingFang SC",
+        "Microsoft YaHei",
+        Arial,
+        sans-serif;
+    background: #f5f6f8;
+    color: #222;
+}
+
+.app {
+    width: 430px;
+    max-width: 100%;
+    min-height: 100vh;
+    margin: auto;
+    padding-bottom: 160px;
+    background: #f5f6f8;
+}
+
+/* =========================
+   顶部导航
+========================= */
+.header {
+    height: 55px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 18px;
+}
+
+.back {
+    width: 40px;
+    font-size: 28px;
+    color: #333;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* =========================
+   地图
+========================= */
+.map-area {
+    height: 230px;
+    overflow: hidden;
+}
+
+.map-bg {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    background: #e9eef2;
+    background-image:
+        linear-gradient(90deg, rgba(255, 255, 255, .7) 1px, transparent 1px),
+        linear-gradient(0deg, rgba(255, 255, 255, .7) 1px, transparent 1px);
+    background-size: 35px 35px;
+}
+
+/* 河流 */
+.map-bg::after {
+    content: "";
+    position: absolute;
+    width: 420px;
+    height: 45px;
+    background: #cbe9f7;
+    top: 25px;
+    left: -20px;
+    border-radius: 50%;
+    transform: rotate(-12deg);
+    opacity: .8;
+}
+
+/* 主道路 */
+.map-bg::before {
+    content: "";
+    position: absolute;
+    width: 330px;
+    height: 22px;
+    background: #fff;
+    left: 45px;
+    top: 125px;
+    border-radius: 20px;
+    transform: rotate(-18deg);
+    box-shadow: 0 0 0 6px #d8e0e5;
+}
+
+/* 导航路线 */
+.route {
+    position: absolute;
+    width: 220px;
+    height: 6px;
+    background: #00b86b;
+    border-radius: 8px;
+    left: 95px;
+    top: 120px;
+    transform: rotate(-18deg);
+    z-index: 3;
+}
+
+.location-point {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    color: #fff;
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+    z-index: 5;
+}
+
+.start {
+    left: 75px;
+    top: 145px;
+    background: #00b86b;
+}
+
+.end {
+    right: 80px;
+    top: 70px;
+    background: #1677ff;
+}
+
+/* =========================
+   地址卡片
+========================= */
+
+.address-card {
+    position: relative;
+    background: #fff;
+    margin: -25px 12px 0;
+    padding: 15px;
+    border-radius: 16px;
+    z-index: 10;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, .08);
+}
+
+.address-item {
+    height: 34px;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+}
+
+.green {
+    color: #00b86b;
+    margin-right: 12px;
+}
+
+.blue {
+    color: #1677ff;
+    margin-right: 12px;
+}
+
+.address-line {
+    height: 1px;
+    background: #eee;
+    margin: 5px 0;
+}
+
+.swap-btn {
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #f5f7fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: #00b86b;
+}
+
+/* =========================
+   TAB
+========================= */
+.tabs {
+    height: 50px;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 65px;
+    margin: 8px;
+}
+
+.tab {
+    height: 50px;
+    line-height: 50px;
+    position: relative;
+    font-size: 16px;
+    color: #777;
+    cursor: pointer;
+}
+
+.tab.active {
+    color: #00b86b;
+    font-weight: 600;
+}
+
+.tab.active::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 48px;
+    height: 3px;
+    background: #00b86b;
+    border-radius: 3px;
+}
+
+/* =========================
+   服务卡片
+========================= */
+
+.quote-card {
+    background: #fff;
+    margin: 8px;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.tips {
+    height: 45px;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    font-size: 14px;
+    color: #666;
+    border-bottom: 1px solid #eee;
+}
+
+.quote-list {
+    padding: 0 16px;
+}
+
+.quote-item {
+    height: 72px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #f1f1f1;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.quote-item:hover {
+    background: #f8fbf9;
+}
+
+.quote-item.selected {
+    background: #eefaf4;
+}
+
+.quote-item.selected .platform {
+    color: #00b86b;
+}
+
+.quote-item:last-child {
+    border-bottom: none;
+}
+
+.platform {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.time {
+    margin-top: 6px;
+    font-size: 12px;
+    color: #999;
+}
+
+.price {
+    font-size: 18px;
+    font-weight: 600;
+    color: #00b86b;
+}
+
+.more-platform {
+    height: 46px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #eee;
+    color: #00b86b;
+    font-size: 14px;
+}
+
+/* =========================
+   底部按钮
+========================= */
+
+.call-btn {
+    position: fixed;
+    left: 50%;
+    bottom: 92px;
+    transform: translateX(-50%);
+    width: 390px;
+    max-width: 90%;
+    height: 52px;
+    border: none;
+    border-radius: 26px;
+    background: #00b86b;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    z-index: 30;
+}
+
+/* 防止内容被按钮遮挡 */
+.page-bottom-space {
+    height: 100px;
+}

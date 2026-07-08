@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>补能</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/energy.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- 顶部导航 -->
+        <div class="header">
+            <div class="back" onclick="history.back()">
+                ←
+            </div>
+            <div class="title">
+                补能
+            </div>
+            <div style="width:40px;"></div>
+        </div>
+
+        <!-- 地图区 -->
+        <div class="map-area">
+            <div class="map-bg">
+                <div class="route"></div>
+                <div class="location-point start">
+                    ●
+                </div>
+                <div class="location-point end">
+                    ●
+                </div>
+            </div>
+        </div>
+
+        <!-- 地址卡片 -->
+        <div class="address-card">
+            <div class="address-item">
+                <span class="green">📍</span>
+                深圳科技园
+            </div>
+            <div class="address-line"></div>
+            <div class="address-item">
+                <span class="blue">⚡</span>
+                我的当前位置
+            </div>
+            <div class="swap-btn">
+                ⇅
+            </div>
+        </div>
+
+        <!-- TAB -->
+        <div class="tabs">
+            <div class="tab active" onclick="switchTab('mobile')">
+                移动补能
+            </div>
+            <div class="tab" onclick="switchTab('station')">
+                聚合充电站
+            </div>
+        </div>
+
+        <!-- 移动补能 -->
+        <div id="mobilePage">
+            <div class="quote-card">
+                <div class="tips">
+                    已找到附近可服务补能车辆
+                </div>
+                <div class="quote-list">
+                    <div class="quote-item">
+                        <div>
+                            <div class="platform">
+                                🚚 约电补能车01
+                            </div>
+                            <div class="time">
+                                预计8分钟到达
+                            </div>
+                        </div>
+                        <div class="price">
+                            ¥39
+                        </div>
+                    </div>
+                    <div class="quote-item">
+                        <div>
+                            <div class="platform">
+                                🚚 约电补能车02
+                            </div>
+                            <div class="time">
+                                预计12分钟到达
+                            </div>
+                        </div>
+                        <div class="price">
+                            ¥45
+                        </div>
+                    </div>
+                    <div class="quote-item">
+                        <div>
+                            <div class="platform">
+                                🔋 搭电救援
+                            </div>
+                            <div class="time">
+                                预计6分钟到达
+                            </div>
+                        </div>
+                        <div class="price">
+                            ¥29
+                        </div>
+                    </div>
+                </div>
+                <div class="more-platform">
+                    更多补能车辆(5) ▼
+                </div>
+            </div>
+            <button class="call-btn">
+                立即呼叫
+            </button>
+        </div>
+
+        <!-- 聚合充电站 -->
+        <div id="stationPage" style="display:none;">
+            <div class="quote-card">
+                <div class="tips">
+                    已找到附近合作充电站
+                </div>
+                <div class="quote-list">
+                    <div class="quote-item">
+                        <div>
+                            <div class="platform">
+                                ⚡ 星星充电
+                            </div>
+                            <div class="time">
+                                距离850m｜¥0.78/度
+                            </div>
+                        </div>
+                        <div class="price">
+                            导航
+                        </div>
+                    </div>
+                    <div class="quote-item">
+                        <div>
+                            <div class="platform">
+                                ⚡ 特来电
+                            </div>
+                            <div class="time">
+                                距离1.2km｜¥0.81/度
+                            </div>
+                        </div>
+                        <div class="price">
+                            导航
+                        </div>
+                    </div>
+                    <div class="quote-item">
+                        <div>
+                            <div class="platform">
+                                ⚡ 云快充
+                            </div>
+                            <div class="time">
+                                距离2.4km｜¥0.75/度
+                            </div>
+                        </div>
+                        <div class="price">
+                            导航
+                        </div>
+                    </div>
+                </div>
+                <div class="more-platform">
+                    更多合作充电站(12) ▼
+                </div>
+            </div>
+            <button class="call-btn">
+                导航去充电
+            </button>
+        </div>
+    </div>
+
+    <!-- 底部导航 -->
+    <div class="bottom-nav">
+        <div class="nav-item" onclick="location.href='index.html'">
+            <div class="nav-icon">🏠</div>
+            <div class="nav-text">首页</div>
+        </div>
+        <div class="nav-item" onclick="location.href='travel.html'">
+            <div class="nav-icon">🚖</div>
+            <div class="nav-text">出行</div>
+        </div>
+        <div class="nav-item active">
+            <div class="nav-icon">🔋</div>
+            <div class="nav-text">补能</div>
+        </div>
+        <div class="nav-item" onclick="location.href='mine.html'">
+            <div class="nav-icon">👤</div>
+            <div class="nav-text">我的</div>
+        </div>
+    </div>
+
+    <script src="js/energy.js"></script>
+
+</body>
+
+</html>
