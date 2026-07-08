@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>出行</title>
+    <link rel="stylesheet" href="css/travel.css">
+    <link rel="stylesheet" href="css/common.css">
+</head>
+
+<body>
+    <div class="app">
+
+        <!-- 顶部导航 -->
+        <div class="header">
+            <div class="back" onclick="history.back()">
+                ←
+            </div>
+            <div class="title">
+                出行
+            </div>
+            <div></div>
+        </div>
+
+        <!-- 地图区域 -->
+        <div class="map-area">
+            <div class="map-bg">
+                <div class="route"></div>
+                <div class="location-point start">
+                    ●
+                </div>
+                <div class="location-point end">
+                    ●
+                </div>
+            </div>
+        </div>
+
+        <!-- 起终点 -->
+        <div class="address-card">
+            <div class="address-item">
+                <span class="green">
+                    ●
+                </span>
+                深圳科技园
+            </div>
+            <div class="address-line"></div>
+            <div class="address-item">
+                <span class="red">
+                    ●
+                </span>
+                深圳北站
+            </div>
+            <div class="swap-btn">
+                ⇅
+            </div>
+        </div>
+
+        <!-- TAB -->
+        <div class="tabs">
+            <div class="tab active" onclick="switchTab('taxi')">
+                网约车
+            </div>
+            <div class="tab" onclick="switchTab('carpool')">
+                顺风车
+            </div>
+        </div>
+
+        <!-- 网约车 -->
+        <div id="taxiPage">
+            <div class="quote-card">
+                <div class="tips">
+                    已为你筛选多个出行平台
+                </div>
+                <div class="quote-list">
+                    <div class="quote-item">
+                        <div>
+                            <div class="platform">
+                                滴滴快车
+                            </div>
+                            <div class="time">
+                                最快4分钟
+                            </div>
+                        </div>
+                        <div class="price">
+                            ¥31
+                        </div>
+                    </div>
+                    <div class="quote-item">
+                        <div>
+                            <div class="platform">
+                                曹操出行
+                            </div>
+                            <div class="time">
+                                预计5分钟
+                            </div>
+                        </div>
+                        <div class="price">
+                            ¥32
+                        </div>
+                    </div>
+                    <div class="quote-item">
+                        <div>
+                            <div class="platform">
+                                T3出行
+                            </div>
+                            <div class="time">
+                                预计4分钟
+                            </div>
+                        </div>
+                        <div class="price">
+                            ¥34
+                        </div>
+                    </div>
+                    <div class="quote-item">
+                        <div>
+                            <div class="platform">
+                                首汽约车
+                            </div>
+                            <div class="time">
+                                预计6分钟
+                            </div>
+                        </div>
+                        <div class="price">
+                            ¥35
+                        </div>
+                    </div>
+                </div>
+                <div class="more-platform">
+                    更多平台报价(6) ▼
+                </div>
+            </div>
+            <button class="call-btn">
+                立即叫车
+            </button>
+        </div>
+
+        <!-- 顺风车 -->
+        <div id="carpoolPage" style="display:none;">
+            <div class="quote-card">
+                <div class="tips">
+                    以下为车主发布的顺路行程
+                </div>
+                <div class="quote-list">
+                    <div class="quote-item">
+                        <div>
+                            <div class="platform">
+                                粤B·8A7C5
+                            </div>
+                            <div class="time">
+                                今天10:00出发
+                            </div>
+                        </div>
+                        <div class="price">
+                            ¥28
+                        </div>
+                    </div>
+                    <div class="quote-item">
+                        <div>
+                            <div class="platform">
+                                粤B·6D2F1
+                            </div>
+                            <div class="time">
+                                今天10:20出发
+                            </div>
+                        </div>
+                        <div class="price">
+                            ¥26
+                        </div>
+                    </div>
+                    <div class="quote-item">
+                        <div>
+                            <div class="platform">
+                                粤B·3K9M2
+                            </div>
+                            <div class="time">
+                                今天10:40出发
+                            </div>
+                        </div>
+                        <div class="price">
+                            ¥27
+                        </div>
+                    </div>
+                </div>
+                <div class="more-platform">
+                    更多车主行程(6) ▼
+                </div>
+            </div>
+            <button class="call-btn">
+                预约顺风车
+            </button>
+        </div>
+
+        <!-- 底部导航 -->
+        <div class="bottom-nav">
+            <div class="nav-item" onclick="location.href='index.html'">
+                <div class="nav-icon">🏠</div>
+                <div class="nav-text">首页</div>
+            </div>
+            <div class="nav-item active" onclick="location.href='travel.html'">
+                <div class="nav-icon">🚖</div>
+                <div class="nav-text">出行</div>
+            </div>
+            <div class="nav-item" onclick="location.href='energy.html'">
+                <div class="nav-icon">🔋</div>
+                <div class="nav-text">补能</div>
+            </div>
+            <div class="nav-item" onclick="location.href='mine.html'">
+                <div class="nav-icon">👤</div>
+                <div class="nav-text">我的</div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="js/travel.js"></script>
+
+</body>
+
+</html>
