@@ -1,0 +1,150 @@
+.page {
+    padding-bottom: 140px;
+}
+
+.option-card {
+    background: #fff;
+    margin: 12px;
+    padding: 16px;
+    border-radius: 16px;
+}
+
+.option-title {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 14px;
+}
+
+.address-row {
+    display: flex;
+    align-items: center;
+    height: 38px;
+    font-size: 15px;
+}
+
+.address-line {
+    height: 1px;
+    background: #eee;
+    margin: 6px 0;
+}
+
+.address-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+
+.start-dot {
+    background: #00b86b;
+}
+
+.end-dot {
+    background: #ff4d4f;
+}
+
+.platform-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.platform-name {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.platform-desc {
+    font-size: 13px;
+    color: #999;
+    margin-top: 4px;
+}
+
+.platform-price {
+    font-size: 26px;
+    color: #ff6a00;
+    font-weight: 700;
+}
+
+.radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.radio-item {
+    padding: 9px 18px;
+    border: 1px solid #ddd;
+    border-radius: 22px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.radio-item.active {
+    background: #1677ff;
+    color: #fff;
+    border-color: #1677ff;
+}
+
+.reserve-box {
+    margin-top: 16px;
+}
+
+.select-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 44px;
+    border-top: 1px solid #eee;
+    font-size: 14px;
+}
+
+.service-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 46px;
+}
+
+textarea {
+    width: 100%;
+    height: 80px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 14px;
+    resize: none;
+}
+
+.price-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price-value {
+    font-size: 28px;
+    color: #ff6a00;
+    font-weight: 700;
+}
+
+.submit-btn {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 74px;
+    width: 390px;
+    max-width: 90%;
+    height: 52px;
+    border: none;
+    border-radius: 26px;
+    background: #1677ff;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 600;
+    z-index: 20;
+}
+
+.hidden {
+    display: none;
+}

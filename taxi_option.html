@@ -11,115 +11,128 @@
 
 <body>
 
-    <div class="app">
+    <div class="app page">
 
         <!-- 顶部 -->
         <div class="header">
-            <div class="back" onclick="history.back()">
-                ←
-            </div>
-            <div class="title">
-                网约车设置
-            </div>
+            <div class="back" onclick="history.back()">←</div>
+            <div class="title">网约车设置</div>
             <div style="width:40px;"></div>
         </div>
 
         <!-- 起终点 -->
-        <div class="card">
-            <div class="location-row">
-                <div class="dot start"></div>
-                <div class="address">
-                    深圳湾科技生态园
+        <div class="option-card">
+            <div class="address-row">
+                <span class="address-dot start-dot"></span>
+                深圳科技园
+            </div>
+            <div class="address-line"></div>
+            <div class="address-row">
+                <span class="address-dot end-dot"></span>
+                深圳北站
+            </div>
+        </div>
+
+        <!-- 出发方式 -->
+        <div class="option-card">
+            <div class="option-title">出发方式</div>
+            <div class="radio-group" id="departType">
+                <div class="radio-item active" data-type="now">
+                    立即出发
+                </div>
+                <div class="radio-item" data-type="reserve">
+                    预约出发
                 </div>
             </div>
-            <div class="line"></div>
-            <div class="location-row">
-                <div class="dot end"></div>
-                <div class="address">
-                    深圳北站
+            <div id="reserveBox" class="reserve-box hidden">
+                <div class="select-row">
+                    <span>预约时间</span>
+                    <span>2026-07-09 14:30 ></span>
                 </div>
             </div>
         </div>
 
-        <!-- 出发时间 -->
-        <div class="card">
-            <div class="section-title">
-                出发时间
+        <!-- 车型 -->
+        <div class="option-card">
+            <div class="option-title">
+                车型选择
             </div>
-            <div class="option-item">
-                <div>
-                    现在出发
+            <div class="radio-group">
+                <div class="radio-item active">
+                    经济型
                 </div>
-                <div class="arrow">
-                    >
+                <div class="radio-item">
+                    优享型
                 </div>
-            </div>
-        </div>
-
-        <!-- 服务需求 -->
-        <div class="card">
-            <div class="section-title">
-                服务需求
-            </div>
-            <div class="service-grid">
-                <div class="service-item active" onclick="toggleItem(this)">
-                    帮人叫车
-                </div>
-                <div class="service-item" onclick="toggleItem(this)">
-                    接机
-                </div>
-                <div class="service-item" onclick="toggleItem(this)">
-                    送机
+                <div class="radio-item">
+                    商务型
                 </div>
             </div>
         </div>
 
-        <!-- 帮人叫车 -->
-        <div class="card" id="otherPassenger">
-            <div class="section-title">
-                乘车人信息
+        <!-- 人数 -->
+        <div class="option-card">
+            <div class="option-title">
+                乘车人数
             </div>
-            <input class="input" type="text" placeholder="请输入乘车人姓名">
-            <input class="input" type="tel" placeholder="请输入联系电话">
+            <div class="radio-group">
+                <div class="radio-item active">
+                    1人
+                </div>
+                <div class="radio-item">
+                    2人
+                </div>
+                <div class="radio-item">
+                    3人
+                </div>
+                <div class="radio-item">
+                    4人+
+                </div>
+            </div>
         </div>
 
-        <!-- 接送机 -->
-        <div class="card" id="flightInfo" style="display:none;">
-            <div class="section-title">
-                航班信息
+        <!-- 更多服务 -->
+        <div class="option-card">
+            <div class="option-title">
+                更多服务
             </div>
-            <input class="input" placeholder="请输入航班号">
-            <input class="input" placeholder="预计到达时间">
+            <div class="service-item">
+                <span>帮人叫车</span>
+                <input type="checkbox">
+            </div>
+            <div class="service-item">
+                <span>接机</span>
+                <input type="checkbox">
+            </div>
+            <div class="service-item">
+                <span>送机</span>
+                <input type="checkbox">
+            </div>
         </div>
 
         <!-- 备注 -->
-        <div class="card">
-            <div class="section-title">
-                备注
+        <div class="option-card">
+            <div class="option-title">
+                备注信息
             </div>
-            <textarea class="remark" placeholder="如有特殊需求可填写（选填）"></textarea>
+            <textarea placeholder="请输入司机备注（选填）"></textarea>
         </div>
 
-        <!-- 预计费用 -->
-        <div class="card">
-            <div class="price-row">
-                <span>预计车型</span>
-                <span>经济型</span>
-            </div>
-            <div class="price-row">
-                <span>预计价格</span>
-                <span class="price">
-                    ￥31~35
+        <!-- 费用 -->
+        <div class="option-card">
+            <div class="price-box">
+                <span>
+                    预估费用
                 </span>
+                <div class="price-value">
+                    ￥31
+                </div>
             </div>
         </div>
 
-        <!-- 底部按钮 -->
-        <div class="bottom-bar">
-            <button class="submit-btn" onclick="location.href='taxi_order.html'">
-                获取平台报价
-            </button>
-        </div>
+        <button class="submit-btn">
+            获取平台报价
+        </button>
 
     </div>
 
