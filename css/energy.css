@@ -1,7 +1,6 @@
 /* =========================
    基础设置
 ========================= */
-
 * {
     box-sizing: border-box;
 }
@@ -137,7 +136,6 @@ body {
 /* =========================
    地址卡片
 ========================= */
-
 .address-card {
     position: relative;
     background: #fff;
@@ -229,7 +227,6 @@ body {
 /* =========================
    服务卡片
 ========================= */
-
 .quote-card {
     background: #fff;
     margin: 8px;
@@ -307,7 +304,6 @@ body {
 /* =========================
    底部按钮
 ========================= */
-
 .call-btn {
     position: fixed;
     left: 50%;
@@ -328,4 +324,45 @@ body {
 /* 防止内容被按钮遮挡 */
 .page-bottom-space {
     height: 100px;
+}
+
+/* =========================
+   合规信息
+========================= */
+.compliance-box {
+    margin: 16px 14px 80px;
+    padding: 14px 16px;
+    background: #f7f8fa;
+    border: 1px solid #ececec;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.compliance-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+    font-size: 13px;
+}
+
+.compliance-links a {
+    color: #666;
+    text-decoration: none;
+    transition: .2s;
+}
+
+.compliance-links a:hover {
+    color: #00b86b;
+}
+
+.compliance-links span {
+    color: #c8c8c8;
+}
+
+.compliance-desc {
+    font-size: 12px;
+    color: #999;
+    line-height: 20px;
 }

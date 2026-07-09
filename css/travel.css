@@ -315,3 +315,44 @@ body {
     font-weight: 600;
     z-index: 30;
 }
+
+/* =========================
+   合规信息
+========================= */
+.compliance-box {
+    margin: 16px 14px 80px;
+    padding: 14px 16px;
+    background: #f7f8fa;
+    border: 1px solid #ececec;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.compliance-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+    font-size: 13px;
+}
+
+.compliance-links a {
+    color: #666;
+    text-decoration: none;
+    transition: .2s;
+}
+
+.compliance-links a:hover {
+    color: #00b86b;
+}
+
+.compliance-links span {
+    color: #c8c8c8;
+}
+
+.compliance-desc {
+    font-size: 12px;
+    color: #999;
+    line-height: 20px;
+}
