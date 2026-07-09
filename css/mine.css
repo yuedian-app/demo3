@@ -1,0 +1,165 @@
+/* =========================
+   基础设置
+========================= */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family:
+        "PingFang SC",
+        "Microsoft YaHei",
+        Arial,
+        sans-serif;
+    background: #f5f6f8;
+    color: #222;
+}
+
+.app {
+    width: 430px;
+    max-width: 100%;
+    min-height: 100vh;
+    margin: auto;
+    padding-bottom: 90px;
+    background: #f5f6f8;
+}
+
+/* =========================
+   顶部登录区域
+========================= */
+.mine-header {
+    padding: 8px 12px 8px;
+}
+
+.user-card {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #f7fffb, #eefaf4);
+    border-radius: 18px;
+    padding: 18px;
+    box-shadow: 0 5px 16px rgba(0, 0, 0, .06);
+}
+
+.logo {
+    width: 100px;
+    object-fit: contain;
+}
+
+.user-info {
+    flex: 1;
+    margin-left: 16px;
+}
+
+.login-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #222;
+}
+
+.login-desc {
+    margin-top: 6px;
+    font-size: 13px;
+    color: #777;
+    line-height: 20px;
+}
+
+.arrow {
+    font-size: 22px;
+    color: #bbb;
+}
+
+/* =========================
+   通用卡片
+========================= */
+.card {
+    margin: 6px 12px;
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, .05);
+}
+
+.section-title {
+    padding: 16px;
+    font-size: 17px;
+    font-weight: 600;
+    color: #222;
+}
+
+/* =========================
+   九宫格
+========================= */
+.grid-menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 22px;
+    padding: 10px 0 22px;
+}
+
+.grid-item {
+    text-align: center;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.grid-item:hover {
+    transform: translateY(-2px);
+}
+
+.icon {
+    font-size: 30px;
+}
+
+.text {
+    margin-top: 8px;
+    font-size: 13px;
+    color: #555;
+}
+
+/* =========================
+   列表
+========================= */
+.list-item {
+    height: 56px;
+    padding: 0 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #f3f3f3;
+    font-size: 15px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.list-item:first-of-type {
+    border-top: none;
+}
+
+.list-item:hover {
+    background: #f8fbf9;
+}
+
+.list-item span:last-child {
+    color: #bbb;
+    font-size: 18px;
+}
+
+/* =========================
+   点击效果
+========================= */
+.grid-item:active,
+.list-item:active,
+.user-card:active {
+    background: #f3f8f5;
+}
+
+/* =========================
+   页面底部留白
+========================= */
+.app::after {
+    content: "";
+    display: block;
+    height: 20px;
+}
