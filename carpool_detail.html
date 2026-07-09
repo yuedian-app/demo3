@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>车主已确认同行</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/carpool_detail.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- 顶部 -->
+        <div class="header">
+            <div class="back" onclick="history.back()">
+                ←
+            </div>
+            <div class="title">
+                车主已确认同行
+            </div>
+            <div style="width:40px;"></div>
+        </div>
+
+        <!-- 地图 -->
+        <div class="trip-map">
+            <div class="car-marker">
+                🚘
+            </div>
+            <div class="route-line"></div>
+        </div>
+
+        <!-- AI推荐 -->
+        <div class="card">
+            <div class="match-success">
+                ✔ 已确认同行
+            </div>
+            <div class="platform-name">
+                哈啰顺风车
+            </div>
+            <div class="recommend-title">
+                约电AI推荐结果
+            </div>
+            <div class="recommend-tags">
+                <span>综合评分最高</span>
+                <span>顺路率98%</span>
+                <span>准点率99%</span>
+            </div>
+        </div>
+
+        <!-- 车主 -->
+        <div class="card">
+            <div class="driver-header">
+                <img src="img/driver.webp" class="driver-avatar">
+                <div>
+                    <div class="driver-name">
+                        王师傅
+                    </div>
+                    <div class="driver-score">
+                        ★★★★★ 4.99
+                    </div>
+                    <div class="driver-exp">
+                        认证车主 · 同行236次
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="driver-info">
+                <span>车辆</span>
+                <span>比亚迪 海豹EV</span>
+            </div>
+            <div class="driver-info">
+                <span>颜色</span>
+                <span>白色</span>
+            </div>
+            <div class="driver-info">
+                <span>车牌</span>
+                <span>粤B·A12345</span>
+            </div>
+            <div class="driver-info">
+                <span>距离您</span>
+                <span>1.5km</span>
+            </div>
+            <div class="driver-info">
+                <span>预计到达</span>
+                <span>5分钟</span>
+            </div>
+        </div>
+
+        <!-- 行程 -->
+        <div class="card">
+            <div class="section-title">
+                行程信息
+            </div>
+            <div class="trip-address">
+                ● 深圳湾科技生态园
+            </div>
+            <div class="trip-arrow">
+                │
+            </div>
+            <div class="trip-address">
+                ● 深圳北站
+            </div>
+        </div>
+
+        <!-- 同行信息 -->
+        <div class="card">
+            <div class="section-title">
+                同行信息
+            </div>
+            <div class="driver-info">
+                <span>乘车方式</span>
+                <span>拼坐</span>
+            </div>
+            <div class="driver-info">
+                <span>乘车人数</span>
+                <span>1人</span>
+            </div>
+            <div class="driver-info">
+                <span>预计费用</span>
+                <span class="price">￥23</span>
+            </div>
+        </div>
+
+        <!-- 安全保障 -->
+        <div class="card">
+            <div class="section-title">
+                安全保障
+            </div>
+            <div class="recommend-tags">
+                <span>实名认证</span>
+                <span>行程分享</span>
+                <span>全程录音</span>
+                <span>一键报警</span>
+            </div>
+        </div>
+        <div style="height:90px;"></div>
+    </div>
+
+    <!-- 底部按钮 -->
+    <div class="trip-bottom">
+        <button class="contact-btn">
+            联系车主
+        </button>
+        <button class="service-btn">
+            联系客服
+        </button>
+        <button class="cancel-btn">
+            取消行程
+        </button>
+    </div>
+
+    <script src="js/carpool_detail.js"></script>
+
+</body>
+
+</html>

@@ -1,47 +1,91 @@
-// =========================
-// 出行页面逻辑
-// =========================
+/* 约电出行 V3.1 travel.html 页面逻辑 */
+document.addEventListener("DOMContentLoaded", function () {
+    initSwap();
+    initCallButton();
+    initMorePlatform();
+});
 
 
-// TAB切换
+/* =========================
+   TAB切换
+   网约车 / 顺风车
+   ========================= */
 function switchTab(type) {
-    const taxiPage = document.getElementById("taxiPage");
-    const carpoolPage = document.getElementById("carpoolPage");
-    const tabs = document.querySelectorAll(".tab");
-    if (type === "carpool") {
-        taxiPage.style.display = "none";
-        carpoolPage.style.display = "block";
-        tabs[0].classList.remove("active");
-        tabs[1].classList.add("active");
-    } else {
-        taxiPage.style.display = "block";
-        carpoolPage.style.display = "none";
+    let tabs = document.querySelectorAll(".tab");
+    tabs.forEach(function (item) {
+        item.classList.remove("active");
+    });
+    if (type === "taxi") {
         tabs[0].classList.add("active");
-        tabs[1].classList.remove("active");
+        document.getElementById("taxiPage").style.display = "block";
+        document.getElementById("carpoolPage").style.display = "none";
+    }
+    if (type === "carpool") {
+        tabs[1].classList.add("active");
+        document.getElementById("taxiPage").style.display = "none";
+        document.getElementById("carpoolPage").style.display = "block";
     }
 }
 
-// =========================
-// 页面初始化
-// =========================
-document.addEventListener("DOMContentLoaded", function () {
-    // 获取URL参数
-    const params = new URLSearchParams(
-        window.location.search
-    );
-    const tab = params.get("tab");
-    if (tab === "carpool") {
-        switchTab("carpool");
-    } else {
-        switchTab("taxi");
+/* =========================
+   起终点交换
+   ========================= */
+function initSwap() {
+    let swap = document.querySelector(".swap-btn");
+    if (!swap) {
+        return;
     }
-    // 立即叫车按钮
-    const callBtn = document.querySelector(".call-btn");
-    if (callBtn) {
-        callBtn.addEventListener("click", function () {
-            alert("正在为您生成订单");
-            // 后续替换：
-            // location.href="order-confirm.html";
-        });
-    }
+    swap.onclick = function () {
+        let items = document.querySelectorAll(".address-item");
+        if (items.length >= 2) {
+            let first = items[0].innerHTML;
+            items[0].innerHTML = items[1].innerHTML;
+            items[1].innerHTML = first;
+        }
+    };
+}
+
+/* =========================
+   立即叫车/预约顺风车
+   ========================= */
+function initCallButton() {
+    let buttons = document.querySelectorAll(".call-btn");
+    buttons.forEach(function (btn) {
+        btn.onclick = function () {
+            let text = this.innerText;
+            if (text.indexOf("叫车") > -1) {
+                window.location.href = "taxi_option.html";
+            }
+            else {
+                window.location.href = "carpool_option.html";
+            }
+        };
+    });
+}
+
+/* =========================
+   更多平台报价
+   ========================= */
+function initMorePlatform() {
+    let more = document.querySelectorAll(".more-platform");
+    more.forEach(function (item) {
+        item.onclick = function () {
+            alert(
+                "更多合作平台报价功能 Demo 展示"
+            );
+        };
+    });
+}
+
+/* =========================
+   模拟地址选择
+   后续接地图API
+   ========================= */
+let addressItems = document.querySelectorAll(".address-item");
+addressItems.forEach(function (item) {
+    item.onclick = function () {
+        alert(
+            "地址选择功能，后续接入地图服务"
+        );
+    };
 });

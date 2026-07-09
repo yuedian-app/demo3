@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>正在匹配顺风车</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/carpool_match.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- 顶部 -->
+        <div class="header">
+            <div class="back" onclick="history.back()">
+                ←
+            </div>
+            <div class="title">
+                正在匹配顺风车
+            </div>
+            <div style="width:40px;"></div>
+        </div>
+
+        <!-- 匹配动画 -->
+        <div class="calling-card">
+            <div class="loading-circle">
+                🚘
+            </div>
+            <div class="calling-title">
+                正在向多个平台发送同行邀请...
+            </div>
+            <div class="calling-desc">
+                请稍候，约电AI正在为您智能匹配顺路车主
+            </div>
+        </div>
+
+        <!-- 已发送平台 -->
+        <div class="card">
+            <div class="section-title">
+                已发送平台
+            </div>
+            <div class="platform">✔ 哈啰顺风车</div>
+            <div class="platform">✔ 滴滴顺风车</div>
+            <div class="platform">✔ 嘀嗒顺风车</div>
+            <div class="platform">✔ 曹操顺风车</div>
+        </div>
+
+        <!-- 平台响应 -->
+        <div class="card">
+            <div class="section-title">
+                平台响应状态
+            </div>
+            <div class="status-row">
+                <span>哈啰顺风车</span>
+                <span class="success">已响应</span>
+            </div>
+            <div class="progress">
+                <div class="bar w100"></div>
+            </div>
+            <div class="status-row">
+                <span>滴滴顺风车</span>
+                <span class="waiting">等待确认</span>
+            </div>
+            <div class="progress">
+                <div class="bar w70"></div>
+            </div>
+            <div class="status-row">
+                <span>嘀嗒顺风车</span>
+                <span class="waiting">等待确认</span>
+            </div>
+            <div class="progress">
+                <div class="bar w50"></div>
+            </div>
+            <div class="status-row">
+                <span>曹操顺风车</span>
+                <span class="matching">匹配中</span>
+            </div>
+            <div class="progress">
+                <div class="bar w30"></div>
+            </div>
+        </div>
+
+        <!-- AI -->
+        <div class="card">
+            <div class="section-title">
+                约电AI持续筛选中
+            </div>
+            <div class="rule">✓ 顺路率最高</div>
+            <div class="rule">✓ 出发时间最优</div>
+            <div class="rule">✓ 用户评分最高</div>
+            <div class="rule">✓ 新能源车辆优先</div>
+        </div>
+
+        <!-- 倒计时 -->
+        <div class="card">
+            <div class="section-title">
+                预计匹配完成
+            </div>
+            <div class="countdown">
+                约 <span id="count">12</span> 秒
+            </div>
+        </div>
+        <div style="height:90px;"></div>
+    </div>
+
+    <!-- 底部 -->
+    <div class="trip-bottom">
+        <button class="service-btn">
+            联系客服
+        </button>
+        <button class="cancel-btn">
+            取消匹配
+        </button>
+    </div>
+
+    <script src="js/carpool_match.js"></script>
+
+</body>
+
+</html>

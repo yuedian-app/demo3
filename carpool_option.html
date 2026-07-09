@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>顺风车设置</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/carpool_option.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- 顶部 -->
+        <div class="header">
+            <div class="back" onclick="history.back()">
+                ←
+            </div>
+            <div class="title">
+                顺风车设置
+            </div>
+            <div style="width:40px;"></div>
+        </div>
+
+        <!-- 起终点 -->
+        <div class="card">
+            <div class="location-row">
+                <div class="dot start"></div>
+                <div class="address">
+                    深圳湾科技生态园
+                </div>
+            </div>
+            <div class="line"></div>
+            <div class="location-row">
+                <div class="dot end"></div>
+                <div class="address">
+                    深圳北站
+                </div>
+            </div>
+        </div>
+
+        <!-- 出发时间 -->
+        <div class="card">
+            <div class="section-title">
+                出发时间
+            </div>
+            <div class="option-item">
+                <span>今天 18:30</span>
+                <span>></span>
+            </div>
+        </div>
+
+        <!-- 拼坐 -->
+        <div class="card">
+            <div class="section-title">
+                乘车方式
+            </div>
+            <div class="select-group">
+                <div class="select-item active">
+                    拼坐
+                </div>
+                <div class="select-item">
+                    独享
+                </div>
+            </div>
+        </div>
+
+        <!-- 人数 -->
+        <div class="card">
+            <div class="section-title">
+                乘车人数
+            </div>
+            <div class="select-group">
+                <div class="select-item active">1人</div>
+                <div class="select-item">2人</div>
+                <div class="select-item">3人</div>
+                <div class="select-item">4人</div>
+            </div>
+        </div>
+
+        <!-- 行李 -->
+        <div class="card">
+            <div class="section-title">
+                行李数量
+            </div>
+            <div class="select-group">
+                <div class="select-item active">
+                    无
+                </div>
+                <div class="select-item">
+                    1件
+                </div>
+                <div class="select-item">
+                    2件以上
+                </div>
+            </div>
+        </div>
+
+        <!-- 是否代叫 -->
+        <div class="card">
+            <div class="section-title">
+                是否代叫
+            </div>
+            <div class="select-group">
+                <div class="select-item active" onclick="showPassenger(false)">
+                    本人乘车
+                </div>
+                <div class="select-item" onclick="showPassenger(true)">
+                    帮他人叫车
+                </div>
+            </div>
+        </div>
+
+        <!-- 乘车人 -->
+        <div class="card" id="passengerCard" style="display:none;">
+            <div class="section-title">
+                乘车人信息
+            </div>
+            <input class="input" placeholder="乘车人姓名">
+            <input class="input" placeholder="联系电话">
+        </div>
+
+        <!-- 备注 -->
+        <div class="card">
+            <div class="section-title">
+                备注
+            </div>
+            <textarea class="remark" placeholder="例如：不要吸烟、不要宠物（选填）"></textarea>
+        </div>
+
+        <!-- 费用 -->
+        <div class="card">
+            <div class="price-row">
+                <span>预计价格</span>
+                <span class="price">
+                    ￥18~24
+                </span>
+            </div>
+        </div>
+        <div style="height:90px;"></div>
+    </div>
+
+    <!-- 底部按钮 -->
+    <div class="bottom-bar">
+        <button class="submit-btn" onclick="location.href='carpool_order.html'">
+            获取聚合顺风车方案
+        </button>
+    </div>
+
+    <script src="js/carpool_option.js"></script>
+
+</body>
+
+</html>

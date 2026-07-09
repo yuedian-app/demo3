@@ -1,42 +1,251 @@
-/* =========================
-   公共底部导航栏
-========================= */
-.bottom-nav {
+/* 约电出行 V3.1 common.css V2 */
+
+* {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+    font-family:
+        "PingFang SC",
+        "Microsoft YaHei",
+        Arial,
+        sans-serif;
+    background: #f5f6f8;
+    color: #222;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.app {
+    width: 430px;
+    max-width: 100%;
+    min-height: 100vh;
+    margin: auto;
+    background: #f5f6f8;
+    padding-bottom: 90px;
+}
+
+/* 顶部导航 */
+.header {
+    height: 55px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 18px;
+}
+
+.back {
+    width: 40px;
+    font-size: 28px;
+    color: #333;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* 通用卡片 */
+.card {
+    background: #fff;
+    margin: 12px;
+    padding: 16px;
+    border-radius: 16px;
+    box-shadow:
+        0 5px 18px rgba(0, 0, 0, .06);
+}
+
+/* 卡片标题 */
+.section-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+/* 通用按钮 */
+.primary-btn {
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 25px;
+    background: #1677ff;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.secondary-btn {
+    width: 100%;
+    height: 48px;
+    border: none;
+    border-radius: 24px;
+    background: #f3f4f6;
+    color: #333;
+    font-size: 16px;
+}
+
+/* 固定底部按钮 */
+.bottom-action {
     position: fixed;
+    bottom: 72px;
     left: 50%;
-    bottom: 0;
     transform: translateX(-50%);
     width: 430px;
     max-width: 100%;
-    height: 72px;
-    background:
-        rgba(255, 255, 255, .92);
-    backdrop-filter: blur(12px);
+    padding: 12px 20px;
+    background: #fff;
+    z-index: 30;
+}
+
+/* 输入框 */
+.input-box {
+    height: 45px;
+    background: #f7f8fa;
+    border-radius: 10px;
+    padding: 0 14px;
     display: flex;
     align-items: center;
+    font-size: 15px;
+    color: #666;
+}
+
+/* 标签 */
+.tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 10px;
+    background: #eef6ff;
+    color: #1677ff;
+    border-radius: 15px;
+    font-size: 12px;
+}
+
+/* 信息行 */
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    font-size: 14px;
+}
+
+.info-label {
+    color: #666;
+}
+
+.info-value {
+    color: #222;
+}
+
+/* 提示文字 */
+.tips-text {
+    font-size: 13px;
+    color: #999;
+    line-height: 20px;
+}
+
+/* 分割线 */
+.divider {
+    height: 1px;
+    background: #eee;
+}
+
+/* 空白占位 */
+.page-space {
+    height: 90px;
+}
+
+/* 合规区域 */
+.compliance-box {
+    margin: 16px 14px 80px;
+    padding: 14px 16px;
+    background: #f7f8fa;
+    border: 1px solid #ececec;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.compliance-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+    font-size: 13px;
+}
+
+.compliance-links a {
+    color: #666;
+    text-decoration: none;
+}
+
+.compliance-links span {
+    color: #ccc;
+}
+
+.compliance-desc {
+    font-size: 12px;
+    color: #999;
+    line-height: 20px;
+}
+
+/* 底部导航 */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 430px;
+    max-width: 100%;
+    height: 64px;
+    background: #fff;
+    display: flex;
     justify-content: space-around;
-    border-top: 1px solid #eeeeee;
-    z-index: 999;
+    align-items: center;
+    box-shadow:
+        0 -2px 10px rgba(0, 0, 0, .08);
+    z-index: 40;
 }
 
 .nav-item {
     flex: 1;
     text-align: center;
     color: #777;
-    cursor: pointer;
-}
-
-.nav-icon {
-    font-size: 26px;
-    line-height: 32px;
-}
-
-.nav-text {
     font-size: 12px;
-    line-height: 18px;
-    margin-top: 2px;
 }
 
 .nav-item.active {
-    color: #00a86b;
+    color: #1677ff;
+}
+
+.nav-icon {
+    font-size: 22px;
+    line-height: 25px;
+}
+
+.nav-text {
+    margin-top: 3px;
+}
+
+/* 弹窗 */
+.toast {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, .75);
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    z-index: 100;
 }

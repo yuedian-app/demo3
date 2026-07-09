@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>司机已接单</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/trip_detail.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- 顶部 -->
+        <div class="header">
+            <div class="back" onclick="history.back()">
+                ←
+            </div>
+            <div class="title">
+                司机已接单
+            </div>
+            <div style="width:40px;"></div>
+        </div>
+
+        <!-- 地图 -->
+        <div class="trip-map">
+            <div class="car-marker">
+                🚖
+            </div>
+            <div class="route-line"></div>
+        </div>
+
+        <!-- 平台推荐 -->
+        <div class="card">
+            <div class="match-success">
+                ✔ 已成功匹配
+            </div>
+            <div class="platform-name">
+                滴滴出行
+            </div>
+            <div class="recommend-title">
+                推荐原因
+            </div>
+            <div class="recommend-tags">
+                <span>最近车辆</span>
+                <span>最低价格</span>
+                <span>响应最快</span>
+            </div>
+        </div>
+
+        <!-- 司机 -->
+        <div class="card">
+            <div class="driver-header">
+                <img src="img/driver.webp" class="driver-avatar">
+                <div>
+                    <div class="driver-name">
+                        王师傅
+                    </div>
+                    <div class="driver-score">
+                        ★★★★★ 4.98
+                    </div>
+                    <div class="driver-exp">
+                        驾龄8年
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="driver-info">
+                <div>
+                    车辆
+                </div>
+                <div>
+                    比亚迪 秦PLUS EV
+                </div>
+            </div>
+            <div class="driver-info">
+                <div>
+                    颜色
+                </div>
+                <div>
+                    白色
+                </div>
+            </div>
+            <div class="driver-info">
+                <div>
+                    车牌
+                </div>
+                <div>
+                    粤B·A12345
+                </div>
+            </div>
+            <div class="driver-info">
+                <div>
+                    距离您
+                </div>
+                <div>
+                    1.2km
+                </div>
+            </div>
+            <div class="driver-info">
+                <div>
+                    预计到达
+                </div>
+                <div>
+                    4分钟
+                </div>
+            </div>
+        </div>
+
+        <!-- 行程 -->
+        <div class="card">
+            <div class="section-title">
+                行程信息
+            </div>
+            <div class="trip-address">
+                ● 深圳湾科技生态园
+            </div>
+            <div class="trip-arrow">
+                │
+            </div>
+            <div class="trip-address">
+                ● 深圳北站
+            </div>
+        </div>
+
+        <!-- 费用 -->
+        <div class="card">
+            <div class="driver-info">
+                <span>预计费用</span>
+                <span class="price">
+                    ￥23
+                </span>
+            </div>
+            <div class="driver-info">
+                <span>平台优惠</span>
+                <span style="color:#18b566">
+                    已优惠￥8
+                </span>
+            </div>
+        </div>
+        <div style="height:90px;"></div>
+
+    </div>
+
+    <!-- 底部 -->
+    <div class="trip-bottom">
+        <button class="contact-btn">
+            联系司机
+        </button>
+        <button class="service-btn">
+            客服
+        </button>
+        <button class="cancel-btn">
+            取消订单
+        </button>
+    </div>
+
+    <script src="js/trip_detail.js"></script>
+
+</body>
+
+</html>

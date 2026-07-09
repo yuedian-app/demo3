@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>订单详情</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/order_detail.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- 顶部 -->
+        <div class="header">
+            <div class="back" onclick="history.back()">
+                ←
+            </div>
+            <div class="title">
+                订单详情
+            </div>
+            <div style="width:40px;"></div>
+        </div>
+
+        <!-- 状态 -->
+        <div class="status-card">
+            <div class="status-icon">
+                ✓
+            </div>
+            <div class="status-title">
+                行程已完成
+            </div>
+            <div class="order-no">
+                订单编号：
+                YD202607090001
+            </div>
+        </div>
+
+        <!-- 服务信息 -->
+        <div class="card">
+            <div class="section-title">
+                服务信息
+            </div>
+            <div class="info-row">
+                <span>
+                    服务类型
+                </span>
+                <span>
+                    🚖 聚合网约车
+                </span>
+            </div>
+            <div class="info-row">
+                <span>
+                    服务平台
+                </span>
+                <span>
+                    滴滴出行
+                </span>
+            </div>
+            <div class="info-row">
+                <span>
+                    订单来源
+                </span>
+                <span>
+                    约电出行
+                </span>
+            </div>
+        </div>
+
+        <!-- 车辆 -->
+        <div class="card">
+            <div class="section-title">
+                车辆信息
+            </div>
+            <div class="info-row">
+                <span>
+                    车型
+                </span>
+                <span>
+                    比亚迪 秦PLUS EV
+                </span>
+            </div>
+            <div class="info-row">
+                <span>
+                    车牌
+                </span>
+                <span>
+                    粤B·A12345
+                </span>
+            </div>
+            <div class="info-row">
+                <span>
+                    司机
+                </span>
+                <span>
+                    王师傅
+                </span>
+            </div>
+        </div>
+
+        <!-- 行程 -->
+        <div class="card">
+            <div class="section-title">
+                行程信息
+            </div>
+            <div class="address">
+                ● 深圳湾科技生态园
+            </div>
+            <div class="arrow">
+                ↓
+            </div>
+            <div class="address">
+                ● 深圳北站
+            </div>
+        </div>
+
+        <!-- 费用 -->
+        <div class="card">
+            <div class="section-title">
+                费用明细
+            </div>
+            <div class="price-row">
+                <span>
+                    订单金额
+                </span>
+                <span>
+                    ￥31
+                </span>
+            </div>
+            <div class="price-row">
+                <span>
+                    平台优惠
+                </span>
+                <span class="discount">
+                    -￥8
+                </span>
+            </div>
+            <div class="total-price">
+                实际支付 ￥23
+            </div>
+        </div>
+
+        <!-- 时间 -->
+        <div class="card">
+            <div class="section-title">
+                时间信息
+            </div>
+            <div class="info-row">
+                <span>
+                    下单时间
+                </span>
+                <span>
+                    18:25
+                </span>
+            </div>
+            <div class="info-row">
+                <span>
+                    完成时间
+                </span>
+                <span>
+                    19:05
+                </span>
+            </div>
+        </div>
+
+        <!-- 保障 -->
+        <div class="card">
+            <div class="section-title">
+                服务保障
+            </div>
+            <div class="tags">
+                <span>
+                    实名认证
+                </span>
+                <span>
+                    行程分享
+                </span>
+                <span>
+                    客服保障
+                </span>
+            </div>
+        </div>
+
+        <!-- 操作 -->
+        <div class="action-box">
+            <button>
+                申请发票
+            </button>
+            <button>
+                联系客服
+            </button>
+            <button onclick="location.href='travel.html'">
+                再次出行
+            </button>
+        </div>
+
+        <!-- 合规 -->
+        <div class="compliance-box">
+            <div>
+                约电出行为聚合出行服务平台
+            </div>
+            <div>
+                运输服务由合作平台提供
+            </div>
+            <div>
+                <a href="user_agreement.html">
+                    用户协议
+                </a>
+                |
+                <a href="privacy.html">
+                    隐私政策
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="js/order_detail.js"></script>
+
+</body>
+
+</html>

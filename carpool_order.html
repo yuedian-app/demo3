@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>聚合顺风车方案</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/carpool_order.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- 顶部 -->
+        <div class="header">
+            <div class="back" onclick="history.back()">
+                ←
+            </div>
+            <div class="title">
+                聚合顺风车方案
+            </div>
+            <div style="width:40px;"></div>
+        </div>
+
+        <!-- 行程 -->
+        <div class="card">
+            <div class="location-row">
+                <span class="start-dot"></span>
+                <span>深圳湾科技生态园</span>
+            </div>
+            <div class="location-line"></div>
+            <div class="location-row">
+                <span class="end-dot"></span>
+                <span>深圳北站</span>
+            </div>
+        </div>
+
+        <!-- 行程信息 -->
+        <div class="card">
+            <div class="trip-info">
+                <span>今天18:30</span>
+                <span>拼坐</span>
+                <span>1人</span>
+            </div>
+        </div>
+
+        <!-- 标题 -->
+        <div class="quote-title">
+            已匹配4个平台顺路车主
+            <span>更新时间：刚刚</span>
+        </div>
+
+        <!-- 推荐 -->
+        <div class="platform-card recommend">
+            <div class="recommend-tag">
+                推荐
+            </div>
+            <div class="platform-left">
+                <div class="platform-name">
+                    哈啰顺风车
+                </div>
+                <div class="platform-desc">
+                    王师傅 ★★★★★
+                </div>
+                <div class="platform-desc">
+                    18:40 出发 · 顺路率98%
+                </div>
+            </div>
+            <div class="platform-right">
+                <div class="price">
+                    ￥23
+                </div>
+                <button onclick="location.href='carpool_match.html'">
+                    选择
+                </button>
+            </div>
+        </div>
+
+        <!-- 滴滴 -->
+        <div class="platform-card">
+            <div class="platform-left">
+                <div class="platform-name">
+                    滴滴顺风车
+                </div>
+                <div class="platform-desc">
+                    李师傅 ★★★★★
+                </div>
+                <div class="platform-desc">
+                    18:35 出发 · 顺路率96%
+                </div>
+            </div>
+            <div class="platform-right">
+                <div class="price">
+                    ￥22
+                </div>
+                <button onclick="location.href='carpool_match.html'">
+                    选择
+                </button>
+            </div>
+        </div>
+
+        <!-- 嘀嗒 -->
+        <div class="platform-card">
+            <div class="platform-left">
+                <div class="platform-name">
+                    嘀嗒顺风车
+                </div>
+                <div class="platform-desc">
+                    张师傅 ★★★★☆
+                </div>
+                <div class="platform-desc">
+                    18:50 出发 · 顺路率94%
+                </div>
+            </div>
+            <div class="platform-right">
+                <div class="price">
+                    ￥21
+                </div>
+                <button onclick="location.href='carpool_match.html'">
+                    选择
+                </button>
+            </div>
+        </div>
+
+        <!-- 曹操 -->
+        <div class="platform-card">
+            <div class="platform-left">
+                <div class="platform-name">
+                    曹操顺风车
+                </div>
+                <div class="platform-desc">
+                    赵师傅 ★★★★★
+                </div>
+                <div class="platform-desc">
+                    18:45 出发 · 顺路率93%
+                </div>
+            </div>
+            <div class="platform-right">
+                <div class="price">
+                    ￥24
+                </div>
+                <button onclick="location.href='carpool_match.html'">
+                    选择
+                </button>
+            </div>
+        </div>
+
+        <!-- 更多 -->
+        <div class="more-platform">
+            查看更多平台（5） ▼
+        </div>
+
+        <!-- 说明 -->
+        <div class="card">
+            <div class="section-title">
+                匹配说明
+            </div>
+            <p class="tips">
+                • 顺风车信息由合作平台实时返回，仅供参考。<br>
+                • 出发时间及价格以车主最终确认信息为准。<br>
+                • 约电出行提供聚合展示、智能匹配及技术服务。
+            </p>
+        </div>
+
+        <!-- 合规 -->
+        <div class="compliance-box">
+            <div class="compliance-links">
+                <a href="user_agreement.html">用户协议</a>
+                <span>|</span>
+                <a href="privacy.html">隐私政策</a>
+            </div>
+            <div class="compliance-links">
+                <a href="travel_rules.html">法律条款与平台规则</a>
+                <span>|</span>
+                <a href="travel_license.html">证照信息</a>
+            </div>
+        </div>
+        <div style="height:90px;"></div>
+    </div>
+
+    <!-- 底部 -->
+    <div class="bottom-action">
+        <button class="call-btn" onclick="location.href='carpool_match.html'">
+            继续等待更多匹配
+        </button>
+    </div>
+
+    <script src="js/carpool_order.js"></script>
+
+</body>
+
+</html>
