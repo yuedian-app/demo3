@@ -1,0 +1,192 @@
+/* taxi_order.css */
+.location-row {
+    display: flex;
+    align-items: center;
+    height: 36px;
+    font-size: 15px;
+}
+
+.location-line {
+    height: 1px;
+    background: #eee;
+    margin: 5px 0;
+}
+
+.start-dot,
+.end-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+
+.start-dot {
+    background: #00b86b;
+}
+
+.end-dot {
+    background: #ff4d4f;
+}
+
+
+/* 行程信息 */
+.trip-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    color: #555;
+}
+
+
+/* 报价标题 */
+.quote-title {
+    margin: 14px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #333;
+}
+
+.quote-title span {
+    float: right;
+    font-size: 12px;
+    color: #999;
+    font-weight: normal;
+}
+
+/* 平台报价卡 */
+.platform-card {
+    margin: 12px;
+    background: #fff;
+    border-radius: 16px;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.platform-left {
+    flex: 1;
+}
+
+.platform-name {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.platform-desc {
+    margin-top: 6px;
+    font-size: 13px;
+    color: #999;
+}
+
+/* 右侧 */
+.platform-right {
+    text-align: right;
+}
+
+.price {
+    font-size: 20px;
+    font-weight: 700;
+    color: #222;
+}
+
+.old-price {
+    font-size: 15px;
+    color: #999;
+    text-decoration: line-through;
+}
+
+.coupon {
+    font-size: 20px;
+    color: #ff6a00;
+    font-weight: 700;
+    margin-top: 3px;
+}
+
+/* 选择按钮 */
+.platform-right button {
+    margin-top: 8px;
+    width: 70px;
+    height: 32px;
+    border-radius: 16px;
+    border: none;
+    background: #1677ff;
+    color: #fff;
+    font-size: 13px;
+}
+
+/* 推荐平台 */
+.recommend {
+    border: 2px solid #1677ff;
+}
+
+.recommend-tag {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #1677ff;
+    color: #fff;
+    padding: 3px 10px;
+    border-radius: 16px 0 16px 0;
+    font-size: 12px;
+}
+
+/* 更多报价 */
+.more-platform {
+    height: 45px;
+    margin: 12px;
+    background: #fff;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #1677ff;
+    font-size: 14px;
+}
+
+/* 费用说明 */
+.section-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.tips {
+    font-size: 13px;
+    line-height: 22px;
+    color: #777;
+    margin: 0;
+}
+
+/* 底部按钮区域 */
+.bottom-action {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 430px;
+    max-width: 100%;
+    padding: 12px 20px;
+    background: #fff;
+    z-index: 30;
+}
+
+/* 呼叫按钮 */
+.call-btn {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 390px;
+    max-width: 90%;
+    height: 52px;
+    border: none;
+    border-radius: 26px;
+    background: #1677ff;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    z-index: 30;
+}

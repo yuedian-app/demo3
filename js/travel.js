@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     initSwap();
     initCallButton();
     initMorePlatform();
+    initTabFromUrl();
 });
 
 
@@ -89,3 +90,22 @@ addressItems.forEach(function (item) {
         );
     };
 });
+
+
+/* =========================
+   根据首页入口定位TAB
+   ========================= */
+function initTabFromUrl() {
+    let params =
+        new URLSearchParams(
+            window.location.search
+        );
+    let tab =
+        params.get("tab");
+    if (tab === "carpool") {
+        switchTab("carpool");
+    }
+    else {
+        switchTab("taxi");
+    }
+}

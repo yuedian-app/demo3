@@ -1,0 +1,136 @@
+/*
+ * 约电出行 V3.1
+ * 订单详情页面
+ */
+
+/* ======================
+   状态卡
+====================== */
+.status-card {
+    background: #16b777;
+    color: #fff;
+    border-radius: 16px;
+    padding: 25px 20px;
+    text-align: center;
+}
+
+.status-icon {
+    width: 48px;
+    height: 48px;
+    margin: auto;
+    border-radius: 50%;
+    background: #fff;
+    color: #16b777;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+.status-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 12px;
+}
+
+.order-no {
+    margin-top: 8px;
+    font-size: 13px;
+    opacity: .9;
+}
+
+/* ======================
+   行程
+====================== */
+.address {
+    font-size: 15px;
+    line-height: 25px;
+}
+
+.arrow {
+    text-align: left;
+    color: #999;
+    padding-left: 8px;
+    margin: 6px 0;
+}
+
+/* ======================
+   费用
+====================== */
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.discount {
+    color: #16b777;
+}
+
+.total-price {
+    text-align: right;
+    font-size: 18px;
+    font-weight: 600;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+}
+
+/* ======================
+   服务标签
+====================== */
+.tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.tags span {
+    background: #f0faf5;
+    color: #16b777;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+}
+
+/* 底部 */
+.action-bottom {
+    position: fixed;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 430px;
+    max-width: 100%;
+    background: #f5f6f8;
+    padding: 12px;
+    display: flex;
+    gap: 10px;
+    z-index: 30;
+}
+
+.action-bottom button {
+    height: 48px;
+    border-radius: 24px;
+    font-size: 15px;
+}
+
+.requestInvoice-btn {
+    flex: 1;
+    background: #1677ff;
+    color: #fff;
+    border: none;
+}
+
+.contactCustomerService-btn {
+    flex: 1;
+    background: #18b566;
+    color: #fff;
+    border: none;
+}
+
+.travelAgain-btn {
+    flex: 1;
+    background: #ff9900;
+    color: #fff;
+    border: 1px solid #ddd;
+}

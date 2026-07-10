@@ -1,0 +1,168 @@
+/*
+ * 约电出行 V3.1
+ * 我的订单页面样式
+ */
+
+/* =========================
+   页面基础
+========================= */
+.app {
+    background: #f5f6f8;
+    min-height: 100vh;
+}
+
+/* =========================
+   顶部导航
+========================= */
+.header {
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffffff;
+    padding: 0 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.back {
+    width: 40px;
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* =========================
+   一级分类
+========================= */
+.main-tabs {
+    display: flex;
+    background: #fff;
+    height: 48px;
+    border-bottom: 1px solid #eee;
+}
+
+.main-tab {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    color: #666;
+    position: relative;
+    cursor: pointer;
+}
+
+.main-tab.active {
+    color: #16b777;
+    font-weight: 600;
+}
+
+.main-tab.active::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 30px;
+    height: 3px;
+    background: #16b777;
+    border-radius: 3px;
+}
+
+/* =========================
+   状态TAB
+========================= */
+.status-tabs {
+    display: flex;
+    padding: 10px 15px;
+    gap: 10px;
+}
+
+.status {
+    background: #fff;
+    padding: 6px 18px;
+    border-radius: 20px;
+    font-size: 13px;
+    color: #666;
+    cursor: pointer;
+}
+
+.status.active {
+    background: #16b777;
+    color: #fff;
+}
+
+/* =========================
+   订单卡片
+========================= */
+.order-card {
+    background: #fff;
+    margin: 0 15px 12px;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, .05);
+    cursor: pointer;
+}
+
+/* 订单头 */
+.order-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.finish {
+    color: #16b777;
+    font-size: 13px;
+}
+
+.processing {
+    color: #ff9800;
+    font-size: 13px;
+}
+
+/* 路线 */
+.route {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.route span {
+    margin: 0 8px;
+    color: #999;
+}
+
+/* 金额 */
+.order-info {
+    display: flex;
+    justify-content: space-between;
+    color: #555;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.order-info span:last-child {
+    color: #111;
+    font-weight: 600;
+}
+
+/* 车辆 */
+.vehicle {
+    font-size: 13px;
+    color: #888;
+    margin-bottom: 12px;
+}
+
+/* 查看详情 */
+.detail {
+    text-align: right;
+    color: #16b777;
+    font-size: 13px;
+}

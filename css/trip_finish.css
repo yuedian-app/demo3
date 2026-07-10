@@ -1,0 +1,173 @@
+/* trip_finish.css */
+/* 完成状态 */
+.finish-card {
+    background: #fff;
+    margin: 16px 12px;
+    padding: 30px 20px;
+    border-radius: 18px;
+    text-align: center;
+}
+
+.finish-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    background: #18b566;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.finish-title {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.finish-desc {
+    margin-top: 8px;
+    color: #888;
+    font-size: 14px;
+}
+
+/* 信息 */
+.info-row {
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    color: #555;
+}
+
+.info-row span:last-child {
+    color: #222;
+}
+
+/* 费用 */
+.price-row {
+    height: 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price {
+    font-size: 28px;
+    font-weight: 700;
+    color: #ff6a00;
+}
+
+.discount {
+    color: #18b566;
+}
+
+/* 新能源 */
+.energy-card {
+    background: #f7fbff;
+}
+
+.energy-content {
+    font-size: 16px;
+    margin: 12px 0;
+}
+
+.carbon {
+    font-size: 14px;
+    color: #666;
+}
+
+.carbon strong {
+    color: #18b566;
+    font-size: 18px;
+}
+
+/* 评价 */
+.stars {
+    text-align: center;
+    font-size: 36px;
+    color: #ffb400;
+    letter-spacing: 5px;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.remark {
+    width: 100%;
+    height: 80px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    resize: none;
+    font-size: 14px;
+}
+
+/* 操作按钮 */
+.action-group {
+    display: flex;
+    gap: 12px;
+    margin: 20px 12px;
+}
+
+.action-group button {
+    flex: 1;
+    height: 48px;
+    border-radius: 24px;
+    font-size: 16px;
+}
+
+/* 合规 */
+.compliance-box {
+    margin: 20px 0 100px;
+    text-align: center;
+    font-size: 13px;
+    color: #999;
+}
+
+.compliance-box a {
+    color: #666;
+    text-decoration: none;
+}
+
+.compliance-box span {
+    margin: 0 8px;
+    color: #ccc;
+}
+
+/* 底部按钮 */
+.trip-bottom {
+    position: fixed;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 430px;
+    max-width: 100%;
+    background: #f5f6f8;
+    padding: 12px;
+    display: flex;
+    gap: 10px;
+    z-index: 30;
+}
+
+.trip-bottom button {
+    height: 48px;
+    border-radius: 24px;
+    font-size: 15px;
+}
+
+.viewOrder-btn {
+    flex: 1.2;
+    background: #1677ff;
+    color: #fff;
+    border: none;
+}
+
+.travelAgain-btn {
+    flex: 1;
+    background: #18b566;
+    color: #fff;
+    border: none;
+}

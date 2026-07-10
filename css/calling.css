@@ -1,0 +1,112 @@
+/* calling.css */
+.calling-card {
+    background: #fff;
+    margin: 12px;
+    padding: 30px 20px;
+    border-radius: 16px;
+    text-align: center;
+}
+
+.loading-circle {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background: #eef5ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 42px;
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.08);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.calling-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #222;
+}
+
+.calling-desc {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #888;
+}
+
+/* 平台列表 */
+.platform {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    color: #333;
+}
+
+/* 倒计时 */
+.countdown {
+    text-align: center;
+    font-size: 15px;
+    color: #666;
+    padding: 15px 0;
+}
+
+.countdown span {
+    font-size: 32px;
+    color: #1677ff;
+    font-weight: 700;
+    margin: 0 5px;
+}
+
+/* 调度规则 */
+.rule {
+    height: 38px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #555;
+}
+
+/* 底部按钮 */
+.bottom-box {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 430px;
+    max-width: 100%;
+    padding: 12px 16px;
+    background: #f5f6f8;
+    display: flex;
+    gap: 12px;
+    z-index: 30;
+}
+
+.bottom-box button {
+    flex: 1;
+    height: 48px;
+    border-radius: 24px;
+    font-size: 16px;
+}
+
+.cancel-btn {
+    border: 1px solid #ddd;
+    background: #fff;
+    color: #666;
+}
+
+.service-btn {
+    border: none;
+    background: #1677ff;
+    color: #fff;
+}

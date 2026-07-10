@@ -11,111 +11,111 @@
 
 <body>
 
-    <div class="app">
+    <div class="app page">
 
         <!-- 顶部 -->
         <div class="header">
-            <div class="back" onclick="history.back()">
-                ←
-            </div>
-            <div class="title">
-                顺风车设置
-            </div>
+            <div class="back" onclick="history.back()">←</div>
+            <div class="title">顺风车设置</div>
             <div style="width:40px;"></div>
         </div>
 
         <!-- 起终点 -->
-        <div class="card">
-            <div class="location-row">
-                <div class="dot start"></div>
-                <div class="address">
-                    深圳湾科技生态园
-                </div>
+        <div class="option-card">
+            <div class="address-row">
+                <span class="address-dot start-dot"></span>
+                深圳科技园
             </div>
-            <div class="line"></div>
-            <div class="location-row">
-                <div class="dot end"></div>
-                <div class="address">
-                    深圳北站
-                </div>
+            <div class="address-line"></div>
+            <div class="address-row">
+                <span class="address-dot end-dot"></span>
+                深圳北站
             </div>
         </div>
 
         <!-- 出发时间 -->
-        <div class="card">
-            <div class="section-title">
-                出发时间
+        <div class="option-card">
+            <div class="option-title">出发时间</div>
+            <div class="radio-group" id="departType">
+                <div class="radio-item active" data-type="now">
+                    立即出发
+                </div>
+                <div class="radio-item" data-type="reserve">
+                    预约出发
+                </div>
             </div>
-            <div class="option-item">
-                <span>今天 18:30</span>
-                <span>></span>
+            <div id="reserveBox" class="reserve-box hidden">
+                <div class="select-row">
+                    <span>预约时间</span>
+                    <span>2026-07-09 14:30 ></span>
+                </div>
             </div>
         </div>
 
         <!-- 拼坐 -->
-        <div class="card">
-            <div class="section-title">
+        <div class="option-card">
+            <div class="option-title">
                 乘车方式
             </div>
-            <div class="select-group">
-                <div class="select-item active">
+            <div class="radio-group">
+                <div class="radio-item active">
                     拼坐
                 </div>
-                <div class="select-item">
+                <div class="radio-item">
                     独享
                 </div>
             </div>
         </div>
 
         <!-- 人数 -->
-        <div class="card">
-            <div class="section-title">
+        <div class="option-card">
+            <div class="option-title">
                 乘车人数
             </div>
-            <div class="select-group">
-                <div class="select-item active">1人</div>
-                <div class="select-item">2人</div>
-                <div class="select-item">3人</div>
-                <div class="select-item">4人</div>
+            <div class="radio-group">
+                <div class="radio-item active">1人</div>
+                <div class="radio-item">2人</div>
+                <div class="radio-item">3人</div>
+                <div class="radio-item">4人</div>
             </div>
         </div>
 
         <!-- 行李 -->
-        <div class="card">
-            <div class="section-title">
+        <div class="option-card">
+            <div class="option-title">
                 行李数量
             </div>
-            <div class="select-group">
-                <div class="select-item active">
+            <div class="radio-group">
+                <div class="radio-item active">
                     无
                 </div>
-                <div class="select-item">
+                <div class="radio-item">
                     1件
                 </div>
-                <div class="select-item">
+                <div class="radio-item">
                     2件以上
                 </div>
             </div>
         </div>
 
         <!-- 是否代叫 -->
-        <div class="card">
-            <div class="section-title">
+        <div class="option-card">
+            <div class="option-title">
                 是否代叫
             </div>
-            <div class="select-group">
-                <div class="select-item active" onclick="showPassenger(false)">
+            <div class="radio-group">
+                <div class="radio-item active" onclick="showPassenger(false)">
                     本人乘车
                 </div>
-                <div class="select-item" onclick="showPassenger(true)">
+                <div class="radio-item" onclick="showPassenger(true)">
                     帮他人叫车
                 </div>
             </div>
         </div>
 
         <!-- 乘车人 -->
-        <div class="card" id="passengerCard" style="display:none;">
-            <div class="section-title">
+        <div class="option-card" id="passengerCard" style="display:none;">
+            <div class="option-title">
                 乘车人信息
             </div>
             <input class="input" placeholder="乘车人姓名">
@@ -123,30 +123,52 @@
         </div>
 
         <!-- 备注 -->
-        <div class="card">
-            <div class="section-title">
+        <div class="option-card">
+            <div class="option-title">
                 备注
             </div>
             <textarea class="remark" placeholder="例如：不要吸烟、不要宠物（选填）"></textarea>
         </div>
 
         <!-- 费用 -->
-        <div class="card">
-            <div class="price-row">
+        <div class="option-card">
+            <div class="price-box">
                 <span>预计价格</span>
-                <span class="price">
+                <span class="price-value">
                     ￥18~24
                 </span>
             </div>
         </div>
-        <div style="height:90px;"></div>
-    </div>
 
-    <!-- 底部按钮 -->
-    <div class="bottom-bar">
-        <button class="submit-btn" onclick="location.href='carpool_order.html'">
+        <!-- 平台合规 -->
+        <div class="compliance-box">
+            <div class="compliance-links">
+                <a href="user_agreement.html">
+                    《用户协议》
+                </a>
+                <span>|</span>
+                <a href="privacy.html">
+                    《隐私政策》
+                </a>
+            </div>
+            <div class="compliance-links">
+                <a href="travel_rules.html">
+                    《法律条款与平台规则》
+                </a>
+                <span>|</span>
+                <a href="travel_license.html">
+                    《证照信息》
+                </a>
+            </div>
+            <div class="compliance-desc">
+                约电出行作为聚合出行服务平台，仅提供信息聚合、交易撮合及相关技术服务；网约车及顺风车服务均由具有合法经营资质的第三方合作平台提供。
+            </div>
+        </div>
+
+        <button class="submit-btn" >
             获取聚合顺风车方案
         </button>
+
     </div>
 
     <script src="js/carpool_option.js"></script>
